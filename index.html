@@ -1,0 +1,334 @@
+<!-- archival.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archival Projects - Our School Website</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/filter.js" defer></script>
+<script src="js/anttracker.js" defer></script>
+<script src="js/popup.js"></script>
+
+</head>
+<body>
+  <img id="ant" src="images/ant1.png" alt="ant" style="display:none;">
+  
+  <header>
+    <img src="images/logo/ginkgologo.png" alt="GINKGO logo" class="ginkgo-logo">
+    <button id="popup-btn" style="margin-left: 20px;">Info</button>
+    <nav>
+      <a href="index.html">Archive</a>
+      <a href="contact.html">Contact</a>
+      <a href="form.html">Submit</a>
+      <a href="news.html">News</a>
+    </nav>
+  </header>
+  <!-- Welcome Popup Modal (dedicated for archive page) -->
+  <div id="welcome-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:100002; align-items:center; justify-content:center;">
+  <div class="popup-modal-content">
+    <button id="close-welcome" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:2rem; color:#EA9B3F; cursor:pointer;">&times;</button>
+    <h2>Welcome to the Ginkgo Colony — A Story of Sustainability and Community</h2>
+    <p>
+     Deep in the heart of the forest lived a remarkable ant colony called Ginkgo. Unlike others that focused only on gathering food, the Ginkgo ants had a bigger mission: to build a thriving, sustainable community where every ant could learn, share, and help care for their home.
+Just as the colony lived in harmony with nature, our website does too — powered entirely by solar energy. It’s a small but meaningful step toward a greener future, showing that technology and sustainability can grow hand in hand.
+    </p>
+     <div class="popup-image-container">
+        <img src="/images/story/GINKGOmain.png" alt="">
+      </div>
+  </div>
+</div>
+  <div id="popup-modal">
+    <div>
+      <button id="close-popup">&times;</button>
+
+      <h2>The Great Archive Tunnel — Our Archive</h2>
+      <p>
+        Whenever an ant completed a project, they would carefully write it down and store it in the Great Archive Tunnel — a special place where the colony’s ideas, stories, and achievements were kept alive. This tunnel became a wellspring of inspiration for future generations of ants.
+On our website, the Archive plays the same role. It’s where you’ll find past projects, stories, and community resources — a treasure trove of green wisdom and creativity to guide and inspire.
+</p>
+      <div class="popup-image-container">
+        <img src="/images/story/GINKGOarchive.png" alt="">
+      </div>
+  </div>
+    </div>
+  </div>
+  
+  <!-- Filters Section -->
+  <section class="filters">
+    <input type="text" id="tag-search" placeholder="Search ..." oninput="filterProjects()">
+    
+    <select id="artist-filter" onchange="filterProjects()">
+      <option value="">Artist</option>
+      <option value="John Doe">John Doe</option>
+      <option value="Jane Smith">Jane Smith</option>
+    </select>
+
+    <select id="area-filter" onchange="filterProjects()">
+      <option value="">Area</option>
+      <option value="Renewable Energy">Renewable Energy</option>
+      <option value="Water Conservation">Water Conservation</option>
+    </select>
+
+    <select id="date-filter" onchange="filterProjects()">
+      <option value="">Year</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+    </select>
+  </section>
+
+  <!-- Projects Grid Section -->
+  <section class="projects-grid">
+    <!-- Example Project 1 -->
+    <div class="project-card" data-tags="solar, sustainability" data-artist="John Doe" data-area="Renewable Energy" data-date="2025">
+      <div class="project-summary">
+        <h3>Solar for everyone</h3>
+        <p class="date">2025</p>
+        <p class="artist"><a href="https://johndoe-portfolio.com" target="_blank" rel="noopener noreferrer">John Doe</a></p>
+        <p class="area">Renewable Energy</p>
+        <p class="tags">+solar +sustainability +trees</p>
+      </div>
+      <div class="project-details">
+        <p>A project focused on conserving water resources in drought-prone areas plays a vital role in ensuring sustainable water availability for communities facing water scarcity. This initiative typically involves implementing efficient irrigation systems, such as drip or sprinkler irrigation, promoting rainwater harvesting, and encouraging the use of drought-resistant crops. Public awareness campaigns and community engagement are key to changing water usage behavior and fostering local stewardship. The project may also include rehabilitating traditional water storage structures and introducing modern technologies for water recycling and reuse. Monitoring and data collection help track usage patterns and guide decision-making. Collaborating with local governments, NGOs, and farmers ensures that solutions are tailored to specific environmental and social conditions. By reducing water wastage and enhancing the resilience of ecosystems and agriculture, the project contributes significantly to long-term water security and supports livelihoods in regions most vulnerable to climate change and prolonged dry spells</p>
+        <div class="project-images">
+          <img src="images/projects/solar-for-everyone/29.jpg" alt="Wind Energy 1">
+          <img src="images/projects/solar-for-everyone/30.jpg" alt="Wind Energy 2">
+          <img src="images/projects/solar-for-everyone/31.jpg" alt="Wind Energy 1">
+          <img src="images/projects/solar-for-everyone/32.jpg" alt="Wind Energy 2">
+          <img src="images/projects/solar-for-everyone/33.jpg" alt="Wind Energy 1">
+          <img src="images/projects/solar-for-everyone/34.jpg" alt="Wind Energy 2">
+          <img src="images/projects/solar-for-everyone/35.jpg" alt="Wind Energy 1">
+          <img src="images/projects/solar-for-everyone/36.jpg" alt="Wind Energy 2">
+          <img src="images/projects/solar-for-everyone/37.jpg" alt="Wind Energy 1">
+          <img src="images/projects/solar-for-everyone/38.jpg" alt="Wind Energy 2">
+          <img src="images/projects/solar-for-everyone/39.jpg" alt="Wind Energy 1">
+          <img src="images/projects/solar-for-everyone/40.jpg" alt="Wind Energy 2">
+        </div>
+      </div>
+    </div>
+
+    <!-- Example Project 2 -->
+    <div class="project-card" data-tags="water, conservation" data-artist="Jane Smith" data-area="Water Conservation" data-date="2024">
+      <div class="project-summary">
+        <h3>Water Conservation</h3>
+        <p>2024</p>
+        <p class="artist">Jane Smith</p>
+        <p>Water Conservation</p>
+        <p class="tags">+water +conservation +plastic +wood +tape +cup +tree +flour</p>
+      </div>
+      <div class="project-details">
+        <p> A project focused on conserving water resources in drought-prone areas.
+        </p>
+        <div class="project-images">
+          <img src="images/projects/water-conservation/7.jpg" alt="Water Conservation 1">
+          <img src="images/projects/water-conservation/8.jpg" alt="Water Conservation 2">
+          <img src="images/projects/water-conservation/9.jpg" alt="Water Conservation 3">
+          <img src="images/projects/water-conservation/10.jpg" alt="Water Conservation 1">
+          <img src="images/projects/water-conservation/11.jpg" alt="Water Conservation 2">
+          <img src="images/projects/water-conservation/12.jpg" alt="Water Conservation 3">
+        </div>
+      </div>
+    </div>
+    <div class="project-card" data-tags="wind, energy" data-artist="Alice Johnson" data-area="Renewable Energy" data-date="2025">
+      <div class="project-summary">
+        <h3>Renewable Energy</h3>
+        <p>2025</p>
+        <p class="artist"><a href="https://alicejohnson-portfolio.com" target="_blank" rel="noopener noreferrer">Alice Johnson</a></p>
+        <p>Renewable Energy</p>
+        <p class="tags">+wind +energy +sustainability</p>
+      </div>
+      <div class="project-details">
+        <p>A project exploring the potential of wind turbines in urban areas.</p>
+        <div class="project-images">
+          <img src="images/projects/renewable-energy/13.jpg" alt="Wind Energy 1">
+          <img src="images/projects/renewable-energy/14.jpg" alt="Wind Energy 2">
+          <img src="images/projects/renewable-energy/15.jpg" alt="Wind Energy 1">
+          <img src="images/projects/renewable-energy/16.jpg" alt="Wind Energy 2">
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" data-tags="recycling, waste" data-artist="Bob Brown" data-area="Waste Management" data-date="2024">
+      <div class="project-summary">
+        <h3>Recycling Installation</h3>
+        <p>2024</p>
+        <p class="artist">Bob Brown</p>
+        <p>Waste Management</p>
+        <p class="tags">+recycling +waste +awareness</p>
+      </div>
+      <div class="project-details">
+        <p>Promoting recycling practices in local communities.</p>
+        <div class="project-images">
+          <img src="images/projects/recycling-installation/17.jpg" alt="Wind Energy 1">
+          <img src="images/projects/recycling-installation/18.jpg" alt="Wind Energy 2">
+          <img src="images/projects/recycling-installation/19.jpg" alt="Wind Energy 1">
+          <img src="images/projects/recycling-installation/20.jpg" alt="Wind Energy 2">
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" data-tags="solar, panels" data-artist="Clara White" data-area="Renewable Energy" data-date="2023">
+      <div class="project-summary">
+        <h3>Solar Panel Installation</h3>
+        <p>2023</p>
+        <p class="artist">Clara White</p>
+        <p>Renewable Energy</p>
+        <p class="tags">+solar +panels +energy</p>
+      </div>
+      <div class="project-details">
+        <p>Installing solar panels in schools to reduce energy costs.</p>
+        <div class="project-images">
+          <img src="images/projects/solar-panel-installation/21.jpg" alt="Wind Energy 1">
+          <img src="images/projects/solar-panel-installation/22.jpg" alt="Wind Energy 2">
+          <img src="images/projects/solar-panel-installation/23.jpg" alt="Wind Energy 1">
+          <img src="images/projects/solar-panel-installation/24.jpg" alt="Wind Energy 2">
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" data-tags="water, purification" data-artist="David Green" data-area="Water Conservation" data-date="2025">
+      <div class="project-summary">
+        <h3>Water Purification Project</h3>
+        <p>2025</p>
+        <p class="artist">David Green</p>
+        <p>Water Conservation</p>
+        <p class="tags">+water +purification +clean</p>
+      </div>
+      <div class="project-details">
+        <p>Developing affordable water purification systems for rural areas.</p>
+        <div class="project-images">
+          <img src="images/projects/water-purification-project/25.jpg" alt="Wind Energy 1">
+          <img src="images/projects/water-purification-project/26.jpg" alt="Wind Energy 2">
+          <img src="images/projects/water-purification-project/27.jpg" alt="Wind Energy 1">
+          <img src="images/projects/water-purification-project/28.jpg" alt="Wind Energy 2">
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" data-tags="biodiversity, conservation" data-artist="Emma Blue" data-area="Environmental Conservation" data-date="2024">
+      <div class="project-summary">
+        <h3>Biodiversity Conservation</h3>
+        <p>2024</p>
+        <p class="artist">Emma Blue</p>
+        <p>Environmental Conservation</p>
+        <p class="tags">+biodiversity +conservation +nature</p>
+      </div>
+      <div class="project-details">
+        <p>Protecting endangered species in local forests.</p>
+        <div class="project-images">
+          <img src="images/projects/biodiversity-conservation/29.jpg" alt="Wind Energy 1">
+          <img src="images/projects/biodiversity-conservation/30.jpg" alt="Wind Energy 2">
+          <img src="images/projects/biodiversity-conservation/31.jpg" alt="Wind Energy 1">
+          <img src="images/projects/biodiversity-conservation/32.jpg" alt="Wind Energy 2">
+          <img src="images/projects/biodiversity-conservation/33.jpg" alt="Wind Energy 1">
+          <img src="images/projects/biodiversity-conservation/34.jpg" alt="Wind Energy 2">
+          <img src="images/projects/biodiversity-conservation/35.jpg" alt="Wind Energy 1">
+          <img src="images/projects/biodiversity-conservation/36.jpg" alt="Wind Energy 2">
+          <img src="images/projects/biodiversity-conservation/37.jpg" alt="Wind Energy 1">
+          <img src="images/projects/biodiversity-conservation/38.jpg" alt="Wind Energy 2">
+          <img src="images/projects/biodiversity-conservation/39.jpg" alt="Wind Energy 1">
+          <img src="images/projects/biodiversity-conservation/40.jpg" alt="Wind Energy 2">
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" data-tags="urban, gardening" data-artist="Frank Black" data-area="Urban Development" data-date="2023">
+      <div class="project-summary">
+        <h3>Urban Gardening Initiative</h3>
+        <p>2023</p>
+        <p class="artist">Frank Black</p>
+        <p>Urban Development</p>
+        <p class="tags">+urban +gardening +green</p>
+      </div>
+      <div class="project-details">
+        <p>Encouraging urban gardening to improve air quality and food security.</p>
+        <div class="project-images">
+          <img src="images/projects/urban-gardening-initiative/41.jpg" alt="Wind Energy 1">
+          <img src="images/projects/urban-gardening-initiative/42.jpg" alt="Wind Energy 2">
+          <img src="images/projects/urban-gardening-initiative/43.jpg" alt="Wind Energy 1">
+          <img src="images/projects/urban-gardening-initiative/44.jpg" alt="Wind Energy 2">
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" data-tags="plastic, pollution" data-artist="Grace Yellow" data-area="Waste Management" data-date="2025">
+      <div class="project-summary">
+        <h3>Plastic Pollution Awareness</h3>
+        <p>2025</p>
+        <p class="artist">Grace Yellow</p>
+        <p>Waste Management</p>
+        <p class="tags">+plastic +pollution +cleanup</p>
+      </div>
+      <div class="project-details">
+        <p>Raising awareness about the dangers of plastic pollution.</p>
+        <div class="project-images">
+          <img src="images/projects/plastic-pollution-awareness/48.jpg" alt="Wind Energy 1">
+          <img src="images/projects/plastic-pollution-awareness/47.jpg" alt="Wind Energy 2">
+          <img src="images/projects/plastic-pollution-awareness/46.jpg" alt="Wind Energy 1">
+          <img src="images/projects/plastic-pollution-awareness/45.jpg" alt="Wind Energy 2">
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" data-tags="energy, efficiency" data-artist="Henry Silver" data-area="Renewable Energy" data-date="2024">
+      <div class="project-summary">
+        <h3>Energy Efficiency Program</h3>
+        <p>2024</p>
+        <p class="artist">Henry Silver</p>
+        <p>Renewable Energy</p>
+        <p class="tags">+energy +efficiency +savings</p>
+      </div>
+      <div class="project-details">
+        <p>Helping households reduce energy consumption through efficient appliances.</p>
+        <div class="project-images">
+          <img src="images/projects/energy-efficiency-program/1.jpg" alt="Solar Project 1">
+          <img src="images/projects/energy-efficiency-program/2.jpg" alt="Solar Project 2">
+          <img src="images/projects/energy-efficiency-program/3.jpg" alt="Water Conservation 3">
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" data-tags="forest, restoration" data-artist="Ivy Gold" data-area="Environmental Conservation" data-date="2023">
+      <div class="project-summary">
+        <h3>Forest Restoration</h3>
+        <p>2023</p>
+        <p class="artist">Ivy Gold</p>
+        <p>Environmental Conservation</p>
+        <p class="tags">+forest +restoration +trees</p>
+      </div>
+      <div class="project-details">
+        <p>Restoring degraded forest areas to improve biodiversity.</p>
+        <div class="project-images">
+          <img src="images/projects/forest-restoration/4.jpg" alt="Water Conservation 1">
+          <img src="images/projects/forest-restoration/5.jpg" alt="Water Conservation 2">
+          <img src="images/projects/forest-restoration/6.jpg" alt="Water Conservation 3">
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card" data-tags="education, sustainability" data-artist="Jack White" data-area="Education" data-date="2025">
+      <div class="project-summary">
+        <h3>Sustainability Education</h3>
+        <p>2025</p>
+        <p class="artist">Jack White</p>
+        <p>Education</p>
+        <p class="tags">+education +sustainability +future</p>
+      </div>
+      <div class="project-details">
+        <p>Teaching students about sustainable practices and their importance.</p>
+        <div class="project-images">
+          <img src="images/projects/sustainability-education/education1.jpg" alt="Sustainability Education 1">
+          <img src="images/projects/sustainability-education/education2.jpg" alt="Sustainability Education 2">
+        </div>
+      </div>
+    </div>
+    <!-- More project cards can go here -->
+  </section>
+
+  <footer>
+    <p>© 2025 Green Office - KABK</p>
+  
+  </footer>
+</body>
+</html>
