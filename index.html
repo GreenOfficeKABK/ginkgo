@@ -53,7 +53,7 @@ On our website, the Archive plays the same role. It’s where you’ll find past
   </div>
     </div>
   </div>
-  
+
   <!-- Filters Section -->
   <section class="filters">
     <input type="text" id="tag-search" placeholder="Search ..." oninput="filterProjects()">
@@ -76,6 +76,22 @@ On our website, the Archive plays the same role. It’s where you’ll find past
       <option value="2024">2024</option>
     </select>
   </section>
+
+
+  <pre id="data-container">Loading data from Directus...</pre>
+
+  <script>
+    fetch('http://172.17.10.150:8055/items/posts')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('data-container').innerText = JSON.stringify(data, null, 2);
+      })
+      .catch(err => {
+        console.error('Error fetching data:', err);
+      });
+  </script>
+
+  
 
   <!-- Projects Grid Section -->
   <section class="projects-grid">
