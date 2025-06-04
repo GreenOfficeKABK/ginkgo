@@ -1,4 +1,4 @@
-const baseURL = "http://192.168.1.55:8055"; // Directus API base URL
+const baseURL = "http://172.17.25.120:8055"; // Directus API base URL
 
 // Fetch project data
 async function loadProjects() {
