@@ -10,7 +10,7 @@ document.querySelector(".contact-form form").addEventListener("submit", async (e
   };
 
   try {
-    const response = await fetch("http://192.168.1.55:3000/send-contact", {
+    const response = await fetch("http://172.17.25.120:8055/send-contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
