@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Your Form - Our School Website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <img id="ant" src="images/ant1.png" alt="ant" style="display:none;">
+  <header>
+    <img src="images/logo/ginkgologo.png" alt="GINKGO logo" class="ginkgo-logo">
+    <button id="popup-btn" style="margin-left: 20px;">Info</button>
+    <nav>
+      <a href="index.html">Archive</a>
+      <a href="news.html">News</a>
+      <a href="form.html">Submit</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div id="popup-modal">
+    <div>
+      <button id="close-popup">&times;</button>
+
+      <h2>The Big Collaboration — Submit Your Work</h2>
+      <p>
+The Ginkgo ants knew sustainability wasn’t just an ant issue — it was something the whole forest needed. So they began working with bees, beetles, butterflies, and all kinds of creatures, sharing knowledge and building together.
+That spirit of unity lives on in our Big Collaboration section. Here, you can submit your own projects, ideas, or stories to be part of something bigger. Because when we work together, the whole forest — and the whole world — becomes greener.
+      </p>
+      <div class="popup-image-container">
+        <img src="images/story/GINKGObigcollab.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Welcome Popup Modal (dedicated for all pages, not just archive) -->
+<div id="welcome-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:100002; align-items:center; justify-content:center;">
+  <div class="popup-modal-content">
+    <button id="close-welcome" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:2rem; color:#EA9B3F; cursor:pointer;">&times;</button>
+    <h2>Welcome to the Ginkgo Colony — A Story of Sustainability and Community</h2>
+    <p>
+     Deep in the heart of the forest lived a remarkable ant colony called Ginkgo. Unlike others that focused only on gathering food, the Ginkgo ants had a bigger mission: to build a thriving, sustainable community where every ant could learn, share, and help care for their home.
+Just as the colony lived in harmony with nature, our website does too — powered entirely by solar energy. It’s a small but meaningful step toward a greener future, showing that technology and sustainability can grow hand in hand.
+    </p>
+     <div class="popup-image-container">
+        <img src="images/story/GINKGOmain.png" alt="">
+      </div>
+  </div>
+</div>
+
+  <section class="form-submission">
+    <h2>Submit Your Project</h2>
+    <form action="#" method="POST" enctype="multipart/form-data">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="project-name">Project Name:</label>
+      <input type="text" id="project-name" name="project-name" required>
+
+      <label for="description">Project Description:</label>
+      <textarea id="description" name="message" rows="5" required></textarea>
+
+      <label for="file">Upload Files:</label>
+      <input type="file" id="file" name="file" multiple required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer style="width:100vw; background:#fff; text-align:center; z-index:1000;">
+    <p>© 2025 Green Office - KABK</p>
+  </footer>
+
+  <script src="js/anttracker.js" defer></script>
+  <script src="js/popup.js" defer></script>
+  <script src="js/form-handler.js" defer></script>
+
+</body>
+</html>
